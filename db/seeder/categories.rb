@@ -14,7 +14,7 @@ module Seeder
       end
     end
 
-   private
+    private
 
     def log(model)
       @logger.info "Updated:#{model}"

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-
   describe 'index' do
     let!(:category) { FactoryBot.create(:category) }
 

@@ -13,7 +13,7 @@ module Seeder
           supplier = Supplier.find_by(code: supplier_data.fetch('code'))
           continue if supplier.nil?
           supplier_data.fetch('stocks').each do |stock_data|
-            stock = Stock.find_or_initialize_by(supplier: supplier, category: category, code: stock_data.fetch('code') )
+            stock = Stock.find_or_initialize_by(supplier: supplier, category: category, code: stock_data.fetch('code'))
             stock.name = stock_data.fetch('name')
             stock.save!
             log(stock)

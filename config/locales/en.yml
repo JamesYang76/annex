@@ -32,8 +32,10 @@
 en:
   table:
     header:
-      id: 'ID'
+      code: 'Code'
       name: 'Name'
+  action:
+    back: 'Back'
   categories:
     index:
       title: 'Listing Categories'

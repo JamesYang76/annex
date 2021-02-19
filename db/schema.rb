@@ -10,33 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_085327) do
-
-  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code"
+ActiveRecord::Schema.define(version: 20_210_219_085_327) do
+  create_table 'categories', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'code'
   end
 
-  create_table "stocks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.bigint "supplier_id", null: false
-    t.bigint "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code"
-    t.index ["category_id"], name: "index_stocks_on_category_id"
-    t.index ["supplier_id"], name: "index_stocks_on_supplier_id"
+  create_table 'stocks', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.bigint 'supplier_id', null: false
+    t.bigint 'category_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'code'
+    t.index ['category_id'], name: 'index_stocks_on_category_id'
+    t.index ['supplier_id'], name: 'index_stocks_on_supplier_id'
   end
 
-  create_table "suppliers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code"
+  create_table 'suppliers', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'code'
   end
 
-  add_foreign_key "stocks", "categories"
-  add_foreign_key "stocks", "suppliers"
+  add_foreign_key 'stocks', 'categories'
+  add_foreign_key 'stocks', 'suppliers'
 end

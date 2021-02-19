@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Suppliers', type: :request do
-
   describe 'index' do
-    let!(:category) { FactoryBot.create(:category,:with_stock) }
+    let!(:category) { FactoryBot.create(:category, :with_stock) }
 
     before { get category_suppliers_url(category) }
 

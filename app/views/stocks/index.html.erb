@@ -1,9 +1,11 @@
 <h1><%= t '.title' %></h1>
+<br>
+<%= link_to (t 'action.back'), :back %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th><%= t 'table.header.id' %></th>
+      <th><%= t 'table.header.code' %></th>
       <th><%= t 'table.header.name' %></th>
     </tr>
   </thead>
@@ -11,7 +13,7 @@
   <tbody>
   <% @stocks.each do |stock| %>
     <tr>
-      <td><%= stock.id %></td>
+      <td><%= stock.code %></td>
       <td><%= stock.name %></td>
     </tr>
   <% end %>

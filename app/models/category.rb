@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   has_many :stocks
-  has_many :suppliers, :through => :stocks
+  has_many :suppliers, through: :stocks
 end
