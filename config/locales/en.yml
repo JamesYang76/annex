@@ -30,4 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  table:
+    header:
+      id: 'ID'
+      name: 'Name'
+  categories:
+    index:
+      title: 'Listing Categories'
+      action:
+        show: 'Show Suppliers'
+  suppliers:
+    index:
+      title: 'Listing Suppliers'
+      action:
+        show: 'Show Stocks'
+  stocks:
+    index:
+       title: 'Stock Items'
+

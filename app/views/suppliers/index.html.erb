@@ -1,0 +1,21 @@
+<h1><%= t '.title' %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t 'table.header.id' %></th>
+      <th><%= t 'table.header.name' %></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @suppliers.each do |supplier| %>
+    <tr>
+      <td><%= supplier.id %></td>
+      <td><%= supplier.name %></td>
+      <td><%= link_to (t '.action.show'), category_supplier_stocks_url(params[:category_id], supplier) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
