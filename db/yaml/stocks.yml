@@ -1,0 +1,102 @@
+---
+categories:
+- code: '01'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_01-01-01'
+    - code: "02"
+      name: 'stock_01-01-02'
+  - code: '02'
+    stocks:
+    - code: "01"
+      name: 'stock_01-02-01'
+    - code: "02"
+      name: 'stock_01-02-02'
+  - code: '03'
+    stocks:
+    - code: "01"
+      name: 'stock_01-03-01'
+    - code: "02"
+      name: 'stock_01-03-02'
+  - code: '04'
+    stocks:
+    - code: "04"
+      name: 'stock_01-04-01'
+    - code: "02"
+      name: 'stock_01-04-02'
+  - code: '05'
+    stocks:
+    - code: "01"
+      name: 'stock_01-05-01'
+    - code: "02"
+      name: 'stock_01-05-02'
+- code: '02'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_02-01-01'
+    - code: "02"
+      name: 'stock_02-01-02'
+  - code: '02'
+    stocks:
+    - code: "01"
+      name: 'stock_02-02-01'
+    - code: "02"
+      name: 'stock_02-02-02'
+  - code: '03'
+    stocks:
+    - code: "01"
+      name: 'stock_02-03-01'
+    - code: "02"
+      name: 'stock_02-03-02'
+- code: '03'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_03-01-01'
+- code: '04'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_04-01-01'
+- code: '05'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_05-01-01'
+- code: '06'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_06-01-01'
+- code: '07'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_07-01-01'
+- code: '08'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_08-01-01'
+- code: '09'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_09-01-01'
+- code: '10'
+  suppliers:
+  - code: '01'
+    stocks:
+    - code: "01"
+      name: 'stock_10-01-01'

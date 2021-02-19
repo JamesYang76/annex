@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-(1..30).each do |number|
-  category = Category.find_or_create_by(name: "Category_#{number}")
-  supplier = Supplier.find_or_create_by(name: "Supplier_#{number}")
-  category.stocks.create(supplier: supplier,name: "Stock_#{number}")
-end
 
+require_relative './seeder/categories'
+require_relative './seeder/suppliers'
+require_relative './seeder/stocks'
+
+Seeder::Categories.new('db/yaml/categories.yml', Logger.new(STDOUT)).seed
+Seeder::Suppliers.new('db/yaml/suppliers.yml', Logger.new(STDOUT)).seed
+Seeder::Stocks.new('db/yaml/stocks.yml', Logger.new(STDOUT)).seed
