@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Seeder
   class Stocks
     def initialize(yaml_path, logger)
@@ -13,16 +15,20 @@ module Seeder
           supplier = Supplier.find_by(code: supplier_data.fetch('code'))
           continue if supplier.nil?
           supplier_data.fetch('stocks').each do |stock_data|
-            stock = Stock.find_or_initialize_by(supplier: supplier, category: category, code: stock_data.fetch('code'))
-            stock.name = stock_data.fetch('name')
-            stock.save!
-            log(stock)
+            update_stock(stock_data, supplier, category)
           end
         end
       end
     end
 
     private
+
+    def update_stock(stock_data, supplier, category)
+      stock = Stock.find_or_initialize_by(supplier: supplier, category: category, code: stock_data.fetch('code'))
+      stock.name = stock_data.fetch('name')
+      stock.save!
+      log(stock)
+    end
 
     def log(model)
       @logger.info "Updated:#{model}"

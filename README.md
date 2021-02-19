@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Secrets
+Clone the `example.env` file included in the root of this project and rename it to `.env`.
 
-* Ruby version
+Need to change database information `DB_USERNAME`,`DB_PASSWORD` and `SOCKET_PATH` which are used in `config/database.yml`
 
-* System dependencies
 
-* Configuration
+# Getting Started
+This application requires:
 
-* Database creation
+- Ruby (see version in `.ruby-version`)
+- Rails 6.1.3
+- Mysql
+- Bundler
+- Yarn
 
-* Database initialization
 
-* How to run the test suite
+All other dependencies will be installed for you when you run `bundle install` and `yarn install`
 
-* Services (job queues, cache servers, search engines, etc.)
+1. `rails db:create`
+2. `rails db:migrate`
+3. `rails db:seed`
 
-* Deployment instructions
+Before starting rails server, run `ci-test` to execute `robocop`, `bundle-audit`, `rspec`, and `brakeman`
+4. `./bin/ci-test` 
+5. `rails s`
 
-* ...
+
+
+# Seed data
+There are three yml file in `/db/yaml`. The data form these files are supposed to be inserted into database.

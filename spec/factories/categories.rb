@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :category do
     name { Faker::Lorem.word }
 
-    sequence(:code) { |n| n.to_s }
+    sequence(:code, &:to_s)
 
     trait :with_stock do
       stocks { [association(:stock)] }

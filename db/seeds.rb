@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -10,6 +12,6 @@ require_relative './seeder/categories'
 require_relative './seeder/suppliers'
 require_relative './seeder/stocks'
 
-Seeder::Categories.new('db/yaml/categories.yml', Logger.new(STDOUT)).seed
-Seeder::Suppliers.new('db/yaml/suppliers.yml', Logger.new(STDOUT)).seed
-Seeder::Stocks.new('db/yaml/stocks.yml', Logger.new(STDOUT)).seed
+Seeder::Categories.new('db/yaml/categories.yml', Logger.new($stdout)).seed
+Seeder::Suppliers.new('db/yaml/suppliers.yml', Logger.new($stdout)).seed
+Seeder::Stocks.new('db/yaml/stocks.yml', Logger.new($stdout)).seed

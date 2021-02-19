@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Seeder
   class Suppliers
     def initialize(yaml_path, logger)
