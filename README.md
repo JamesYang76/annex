@@ -24,6 +24,7 @@ All other dependencies will be installed for you when you run `bundle install` a
 3. `rails db:seed`
 
 Before starting rails server, run `ci-test` to execute `robocop`, `bundle-audit`, `rspec`, and `brakeman`
+
 4. `./bin/ci-test` 
 5. `rails s`
 
