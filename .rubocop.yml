@@ -2,20 +2,8 @@ require:
  - rubocop-performance
  - rubocop-rails
 
-
-
-Metrics/MethodLength:
-  Max: 20
-  Exclude:
-    - "db/migrate/**/*.rb"
-
-# We do not typically use/need class documentation
-Style/Documentation:
-  Enabled: false
-
 Rails:
   Enable: true
-
 
 AllCops:
   NewCops: disable
@@ -32,3 +20,10 @@ AllCops:
     - "doc/**/*"
     - "node_modules/**/*"
     - "config/environments/**/*"
+
+Metrics/MethodLength:
+  Max: 20
+
+# We do not typically use/need class documentation
+Style/Documentation:
+  Enabled: false
