@@ -6,4 +6,6 @@ class Stock < ApplicationRecord
 
   validates :code, presence: true
   validates :name, presence: true
+
+  validates :code, uniqueness: { scope: %i[supplier_id category_id] }
 end

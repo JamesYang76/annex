@@ -6,4 +6,6 @@ class Supplier < ApplicationRecord
 
   validates :code, presence: true
   validates :name, presence: true
+
+  validates :code, uniqueness: true
 end
