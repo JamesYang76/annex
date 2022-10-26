@@ -2,7 +2,7 @@
 
 
 # Requirement
-Create a small rails 6.2 app with suppliers, stock and categories.\
+Create a small rails 6.x app with suppliers, stock and categories.\
 Database is Mysql.
 
 Supplier has many categories.
