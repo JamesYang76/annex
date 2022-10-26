@@ -1,6 +1,19 @@
 # README
 
 
+# Requirement
+Create a small rails 6.2 app with suppliers, stock and categories.
+Database is Mysql.
+
+Supplier has many categories.
+Supplier categories has many stock items.
+
+List all categories.
+when you click on a category it shows all suppliers
+on every supplier is a link to his stock for this category.
+
+Doesn’t have to be pretty with css, html or fancy js.
+
 # Secrets
 Clone the `example.env` file included in the root of this project and rename it to `.env`.
 
